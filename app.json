@@ -7,7 +7,7 @@
     "API_ID": {"description": "Your telegram API ID, Get it from my.telegram.org", "value": ""},
     "API_HASH": { "description": "Your telegram API HASH, Get it from my.telegram.org", "value": ""},
     "SESSION": { "description": "pyrogram v2 session string ⚠️ v2 required ⚠️", "value": ""},
-    "CHANNELS": { "description": "ID of you Groups or channels (seperate by spaces). This variable is command work only in your group", "value": "", "required": false},                
+    "CHANNELS": { "description": "ID of you Groups or channels (seperate by spaces). This variable is command work only in your group", "value": "", "required": false}              
   },
   "buildpacks": [{"url": "heroku/python"}],   
   "formation": {"worker": {"quantity": 1, "size": "free"}}
