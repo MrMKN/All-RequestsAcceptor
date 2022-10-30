@@ -5,7 +5,7 @@ import asyncio
 
 C = [".", "/"]
 CHANNELS = []
-for grp in environ.get("CHANNELS").split():
+for grp in environ.get("CHANNELS", "-100").split():
     CHANNELS.append(int(grp))
 
 authchat = filters.chat(CHANNELS) if CHANNELS else (filters.group | filters.channel)         
