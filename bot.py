@@ -43,4 +43,4 @@ async def decline(client: User, message: Message):
 
 
 print("bot started....")
-User.run(
+User.run()
