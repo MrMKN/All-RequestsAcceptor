@@ -29,6 +29,6 @@ Accept or Decline all pending join requests in a chat. UserBot
 
 ## How To Use Command 
 <p align="center">
-    <img src="https://te.legra.ph/file/039877677cd0e83f97880.mp4">
+    <img src="https://telegra.ph/file/266aa92564b9b7f8aa67b.mp4">
 </p>
 
