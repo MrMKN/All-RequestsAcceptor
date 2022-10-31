@@ -23,7 +23,7 @@ Accept or Decline all pending join requests in a chat. UserBot
 
 ## Credits
 
-● my pyrogram master ❤️‍🔥 [PR0FESS0R-99](https://github.com/PR0FESS0R-99)
+● my pyro master ❤️‍🔥 [PR0FESS0R-99](https://github.com/PR0FESS0R-99)
 
 ● library [pyrogram](https://docs.pyrogram.org)
 
