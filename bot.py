@@ -21,7 +21,7 @@ async def approve(client: User, message: Message):
     try:
        await message.delete()
        await client.approve_all_chat_join_requests(chat.id) 
-       return await client.send_message(chat.id, "mission completed ✅️ approved all joinrequest")         
+       await client.send_message(chat.id, "✅️ approving all joinrequest 🙏 please wait...")         
     except Exception as e:
        print(e)
 
@@ -31,7 +31,7 @@ async def decline(client: User, message: Message):
     try:
        await message.delete()
        await client.decline_all_chat_join_requests(chat.id) 
-       return await client.send_message(chat.id, "mission completed ❌️ declined all joinrequest")            
+       await client.send_message(chat.id, "❌️ declining all joinrequest 🙏 please wait...")            
     except Exception as e:
        print(e)
 
