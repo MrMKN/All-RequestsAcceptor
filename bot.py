@@ -30,9 +30,9 @@ async def approve(client: User, message: Message):
           return    
     except Exception as e:
        print(e)
-    del = await client.send_message(chat.id, "mission completed ✅️ approved all joinrequest")
+    hhh = await client.send_message(chat.id, "mission completed ✅️ approved all joinrequest")
     await asyncio.sleep(3)
-    await del.delete()
+    await hhh.delete()
  
 @User.on_message(filters.command(["no", "remove", "decline"], C) & authchat)                     
 async def decline(client: User, message: Message):
@@ -48,9 +48,9 @@ async def decline(client: User, message: Message):
           return     
     except Exception as e:
        print(e)
-    del = await client.send_message(chat.id, "mission completed ❌️ declined all joinrequest")  
+    hhh = await client.send_message(chat.id, "mission completed ❌️ declined all joinrequest")  
     await asyncio.sleep(3)
-    await del.delete()     
+    await hhh.delete()     
 
 print("bot started....")
 User.run()
