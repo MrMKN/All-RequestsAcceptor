@@ -20,7 +20,6 @@ User = Client(
 async def approve(client: User, message: Message):
     chat=message.chat 
     try:
-       await message.delete()
        try:
           await client.approve_all_chat_join_requests(chat.id)
           return
@@ -38,7 +37,6 @@ async def approve(client: User, message: Message):
 async def decline(client: User, message: Message):
     chat=message.chat 
     try:
-       await message.delete()
        try:
           await client.decline_all_chat_join_requests(chat.id)
           return   
