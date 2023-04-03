@@ -1,4 +1,10 @@
 from os import environ
+
+session_string = environ.get("SESSION")
+api_id = int(environ.get("API_ID"))
+api_hash = environ.get("API_HASH")
+bot_token = environ.get("BOT_TOKEN")
+
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
@@ -9,11 +15,7 @@ CHANNELS = [int(chnel) for chnel in environ.get("CHANNELS", None).split()]
 
 authchat = filters.chat(CHANNELS) if CHANNELS else (filters.group | filters.channel)         
 
-User = Client(
-    name = "acceptUser",
-    session_string = environ.get("SESSION"),
-    api_id = int(environ.get("API_ID")),
-    api_hash = environ.get("API_HASH")
+bot_client = Client("acceptUser", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
 )
 
 @User.on_message(filters.command(["run", "approve"], C) & authchat)                     
