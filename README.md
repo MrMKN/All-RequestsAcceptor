@@ -12,9 +12,9 @@ Accept all pending join requests in a chat. UserBot
 
 ## Variables
 
-`SESSION` : pyrogram v2 user session ⚠️ v2 required ⚠️
+`SESSION` : pyrogram v2 user session ⚠️ v2 required ⚠️ & User must joined in your channel
 
-`CHANNELS` : [optional] ID of you Groups or channels (seperate by spaces). This variable is command work only in your group              
+`CHANNELS` : [optional] ID of you Groups or channels (seperate by spaces). This variable is command work only in your group or channel         
 
 ## Credits
 
