@@ -18,7 +18,7 @@ async def approve(client: User, message: Message):
     await message.delete(True)
  
     try:
-       whle True: # create loop is better techniq 🙃
+       while True: # create loop is better techniq 🙃
            try:
                await client.approve_all_chat_join_requests(Id)         
            except FloodWait as t:
@@ -28,7 +28,7 @@ async def approve(client: User, message: Message):
                logging.error(str(e))
     except FloodWait as s:
         asyncio.sleep(s.value)
-        whle True:
+        while True:
            try:
                await client.approve_all_chat_join_requests(Id)         
            except FloodWait as t:
