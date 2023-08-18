@@ -7,7 +7,7 @@ from pyrogram.errors import FloodWait
 
 logging.basicConfig(level=logging.ERROR)
 
-CHANNELS = [int(CHANNEL) for CHANNEL in environ.get("CHANNELS", None).split()]       
+CHANNELS = [int(CHANNEL) for CHANNEL in environ.get("CHANNELS", "").split()]       
 AuthChat = filters.chat(CHANNELS) if CHANNELS else (filters.group | filters.channel)         
 User     = Client(name = "AcceptUser", session_string = environ.get("SESSION"))
 
