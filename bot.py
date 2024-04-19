@@ -2,23 +2,21 @@ import logging, asyncio
 
 from os import environ
 from pyrogram import Client, filters
-from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 
 logging.basicConfig(level=logging.ERROR)
+       
+USER_SESSION = environ.get("SESSION", "")        
+User = Client(name="AcceptUser", session_string=USER_SESSION)
 
-CHANNELS = [int(CHANNEL) for CHANNEL in environ.get("CHANNELS", "").split()]       
-AuthChat = filters.chat(CHANNELS) if CHANNELS else (filters.group | filters.channel)         
-User     = Client(name = "AcceptUser", session_string = environ.get("SESSION"))
 
-
-@User.on_message(filters.command(["run", "approve", "start"], [".", "/"]) & AuthChat)                     
-async def approve(client: User, message: Message):
+@User.on_message(filters.command(["run", "approve"], [".", "/"]))                     
+async def approve(client, message):
     Id = message.chat.id
     await message.delete(True)
  
     try:
-       while True: # create loop is better techniq 🙃
+       while True: # create loop is better techniq to accept within seconds 💀
            try:
                await client.approve_all_chat_join_requests(Id)         
            except FloodWait as t:
@@ -38,7 +36,6 @@ async def approve(client: User, message: Message):
                logging.error(str(e))
 
     msg = await client.send_message(Id, "**Task Completed** ✓ **Approved Pending All Join Request**")
-    await asyncio.sleep(3)
     await msg.delete()
 
 
