@@ -4,8 +4,7 @@
   "keywords": ["telegram", "bot"],
   "repository": "https://github.com/MrMKN/Approve-All-JoinRequests",
   "env": {
-    "SESSION": {"description": "pyrogram v2 session string ⚠️ v2 required ⚠️", "value": ""},
-    "CHANNELS": {"description": "ID of you Groups or channels (seperate by spaces). This variable is command work only in your group", "value": "", "required": false}              
+    "SESSION": {"description": "pyrogram v2 session string ⚠️ v2 required ⚠️", "value": ""},              
   },
   "buildpacks": [{"url": "heroku/python"}]
 }
