@@ -14,8 +14,6 @@ Accept all pending join requests in a chat. UserBot
 
 `SESSION` : pyrogram v2 user session ⚠️ v2 required ⚠️ & User must joined in your channel
 
-`CHANNELS` : [optional] ID of you Groups or channels (seperate by spaces). This variable is command work only in your group or channel         
-
 ## Credits
 
 ● my pyro masters ❤️‍🔥 [PR0FESS0R-99](https://github.com/PR0FESS0R-99) & [MdhRzn](https://t.me/Mhd_rzn)
