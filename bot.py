@@ -6,8 +6,8 @@ from pyrogram.errors import FloodWait
 
 logging.basicConfig(level=logging.ERROR)
        
-USER_SESSION = environ.get("SESSION", "")        
-User = Client(name="AcceptUser", session_string=USER_SESSION)
+SESSION = environ.get("SESSION", "")        
+User = Client(name="AcceptUser", session_string=SESSION)
 
 
 @User.on_message(filters.command(["run", "approve"], [".", "/"]))                     
